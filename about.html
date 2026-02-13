@@ -8,7 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; overflow-x: hidden; }
+        /* PERBAIKAN UTAMA AGAR TIDAK BISA DIGESER SAMPING */
+        html, body { 
+            max-width: 100%; 
+            overflow-x: hidden; 
+            width: 100%;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; }
         h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; }
         
         /* Custom Styles */
@@ -34,33 +41,32 @@
         /* ========================= */
         @media (max-width: 768px) {
             .header-about {
-                padding: 60px 15px; /* Lebih pendek di HP */
+                padding: 60px 15px;
             }
             .header-about h1 {
-                font-size: 1.8rem; /* Supaya teks judul tidak pecah baris berlebihan */
+                font-size: 1.8rem;
             }
             .header-about p {
                 font-size: 1rem !important;
             }
             .img-about {
-                box-shadow: 10px 10px 0px #ffc107; /* Box shadow lebih kecil */
+                box-shadow: 10px 10px 0px #ffc107;
                 margin-bottom: 20px;
+                max-width: 90%; /* Agar bayangan tidak keluar layar */
             }
             .display-5 {
-                font-size: 1.6rem; /* Ukuran font judul section */
+                font-size: 1.6rem;
             }
             .timeline-item {
                 margin-left: 10px;
                 padding-left: 15px;
             }
-            /* Menghilangkan filter grayscale di HP agar langsung berwarna (user mobile jarang hover) */
             .team-card img {
                 filter: grayscale(0%);
                 height: 350px;
             }
-            /* Spasi antar elemen statistik */
             .stat-box {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -96,7 +102,7 @@
 </header>
 
 <section class="py-5">
-    <div class="container py-lg-5">
+    <div class="container py-lg-5 overflow-hidden">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 text-center text-lg-start">
                 <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000" class="img-fluid img-about" alt="Tentang Kami">
@@ -107,7 +113,7 @@
                 <p class="text-muted">Dimulai dari sebuah garasi kecil di sudut kota pada tahun 2023, Kopi Senja didirikan dengan satu misi sederhana: membawa kualitas kopi artisan ke semua lapisan masyarakat.</p>
                 <p class="text-muted">Kami menyediakan ruang di mana ide lahir, persahabatan terjalin, dan penat hilang. Setiap biji kopi yang kami gunakan telah melewati proses seleksi ketat untuk memastikan profil rasa yang konsisten.</p>
                 
-                <div class="row mt-4 g-2 text-center text-sm-start">
+                <div class="row mt-4 gx-0 text-center text-sm-start">
                     <div class="col-4 stat-box">
                         <h3 class="fw-bold text-dark mb-0">03</h3>
                         <p class="text-muted small">Cabang</p>
@@ -127,7 +133,7 @@
 </section>
 
 <section class="py-5 bg-cream">
-    <div class="container">
+    <div class="container overflow-hidden">
         <h2 class="text-center fw-bold mb-5">Perjalanan Kami</h2>
         <div class="row justify-content-center">
             <div class="col-md-8 col-11">
@@ -153,7 +159,7 @@
 </section>
 
 <section class="py-5">
-    <div class="container text-center">
+    <div class="container text-center overflow-hidden">
         <h2 class="fw-bold mb-5">Orang di Balik Layar</h2>
         <div class="row g-4">
             <div class="col-12 col-md-4">
@@ -182,7 +188,7 @@
 </section>
 
 <section class="py-5 bg-dark text-white">
-    <div class="container text-center py-4">
+    <div class="container text-center py-4 overflow-hidden">
         <h2 class="fw-bold mb-5 text-warning">Nilai Yang Kami Pegang</h2>
         <div class="row g-4">
             <div class="col-6 col-md-3">
