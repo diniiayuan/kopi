@@ -30,32 +30,32 @@
         .nav-link:hover { color: #ffc107 !important; }
 
         /* ========================= */
-        /* RESPONSIVE FIXES (MOBILE) */
+        /* PERBAIKAN RESPONSIF KHUSUS HP */
         /* ========================= */
         @media (max-width: 768px) {
             .header-about {
-                padding: 80px 0;
+                padding: 60px 20px; /* Padding lebih kecil agar teks tidak terlalu mepet */
             }
             .header-about h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem; /* Ukuran h1 dikecilkan agar tidak pecah baris berantakan */
+            }
+            .header-about p {
+                font-size: 1rem !important;
             }
             .img-about {
-                box-shadow: 10px 10px 0px #ffc107; /* Bayangan lebih tipis di HP */
-                margin-bottom: 20px;
-            }
-            .timeline-item {
-                margin-left: 10px; /* Memberi ruang lebih di sisi kiri */
+                box-shadow: 8px 8px 0px #ffc107; /* Bayangan diperkecil agar tidak 'berat' */
+                margin-bottom: 30px;
             }
             .display-5 {
-                font-size: 1.8rem;
+                font-size: 1.6rem; /* Judul "Membangun Komunitas" diperkecil */
             }
-            /* Mengatur agar teks statistik di bawah "Our Story" tidak bertumpuk */
-            .col-sm-4 {
-                margin-bottom: 15px;
+            .timeline-item {
+                margin-left: 5px;
+                padding-left: 15px;
             }
-            .team-card img {
-                height: 350px; /* Lebih tinggi di HP agar proporsional saat satu kolom */
-                filter: grayscale(0%); /* Disable grayscale di HP agar lebih menarik langsung */
+            /* Menghilangkan margin berlebih pada statistik di HP */
+            .row.mt-4.g-3 > div {
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -101,16 +101,17 @@
                 <h2 class="display-5 fw-bold mb-4">Membangun Komunitas Lewat Secangkir Kopi</h2>
                 <p class="text-muted">Dimulai dari sebuah garasi kecil di sudut kota pada tahun 2023, Kopi Senja didirikan dengan satu misi sederhana: membawa kualitas kopi artisan ke semua lapisan masyarakat.</p>
                 <p class="text-muted">Kami menyediakan ruang di mana ide lahir, persahabatan terjalin, dan penat hilang. Setiap biji kopi yang kami gunakan telah melewati proses seleksi ketat untuk memastikan profil rasa yang konsisten.</p>
-                <div class="row mt-4 g-3 text-center text-sm-start">
-                    <div class="col-4 col-sm-4">
+                
+                <div class="row mt-4 g-2 text-center text-sm-start">
+                    <div class="col-4">
                         <h3 class="fw-bold text-dark mb-0">03</h3>
                         <p class="text-muted small">Cabang</p>
                     </div>
-                    <div class="col-4 col-sm-4">
+                    <div class="col-4">
                         <h3 class="fw-bold text-dark mb-0">12+</h3>
                         <p class="text-muted small">Barista</p>
                     </div>
-                    <div class="col-4 col-sm-4">
+                    <div class="col-4">
                         <h3 class="fw-bold text-dark mb-0">100%</h3>
                         <p class="text-muted small">Lokal</p>
                     </div>
@@ -150,21 +151,21 @@
     <div class="container text-center">
         <h2 class="fw-bold mb-5">Orang di Balik Layar</h2>
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="team-card">
                     <img src="https://i.pinimg.com/1200x/6c/28/6e/6c286ea85654384ee32680eb811e5d92.jpg" class="img-fluid mb-3 w-100" alt="Founder">
                     <h5 class="fw-bold">Aris Pratama</h5>
                     <p class="text-warning fw-bold">Founder & Head Roaster</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="team-card">
                     <img src="https://i.pinimg.com/736x/b6/b2/9f/b6b29f0752d3530e2e7cebbf09e1e5ab.jpg" class="img-fluid mb-3 w-100" alt="Head Barista">
                     <h5 class="fw-bold">Siska Wijaya</h5>
                     <p class="text-warning fw-bold">Head Barista</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-md-4">
                 <div class="team-card">
                     <img src="https://i.pinimg.com/736x/c7/cc/69/c7cc69e4dc1fc74478db2e8014add06b.jpg" class="img-fluid mb-3 w-100" alt="Manager">
                     <h5 class="fw-bold">Dimas Anggara</h5>
@@ -181,23 +182,23 @@
         <div class="row g-4">
             <div class="col-6 col-md-3">
                 <i class="bi bi-heart-fill fs-1 text-warning"></i>
-                <h5 class="mt-3">Integritas</h5>
-                <p class="small text-white-50 d-none d-sm-block">Kejujuran dalam setiap gram kopi yang kami timbang.</p>
+                <h5 class="mt-2" style="font-size: 1rem;">Integritas</h5>
+                <p class="small text-white-50 d-none d-sm-block">Kejujuran dalam setiap gram kopi.</p>
             </div>
             <div class="col-6 col-md-3">
                 <i class="bi bi-people-fill fs-1 text-warning"></i>
-                <h5 class="mt-3">Komunitas</h5>
-                <p class="small text-white-50 d-none d-sm-block">Menjadi wadah bagi siapa saja untuk berbagi cerita.</p>
+                <h5 class="mt-2" style="font-size: 1rem;">Komunitas</h5>
+                <p class="small text-white-50 d-none d-sm-block">Wadah bagi semua cerita.</p>
             </div>
             <div class="col-6 col-md-3">
                 <i class="bi bi-award-fill fs-1 text-warning"></i>
-                <h5 class="mt-3">Kualitas</h5>
-                <p class="small text-white-50 d-none d-sm-block">Hanya menggunakan bahan terbaik tanpa kompromi.</p>
+                <h5 class="mt-2" style="font-size: 1rem;">Kualitas</h5>
+                <p class="small text-white-50 d-none d-sm-block">Bahan terbaik tanpa kompromi.</p>
             </div>
             <div class="col-6 col-md-3">
                 <i class="bi bi-geo-alt-fill fs-1 text-warning"></i>
-                <h5 class="mt-3">Lokal</h5>
-                <p class="small text-white-50 d-none d-sm-block">Mendukung penuh ekosistem kopi nusantara.</p>
+                <h5 class="mt-2" style="font-size: 1rem;">Lokal</h5>
+                <p class="small text-white-50 d-none d-sm-block">Dukung ekosistem nusantara.</p>
             </div>
         </div>
     </div>
