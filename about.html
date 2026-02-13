@@ -28,6 +28,36 @@
         .team-card img { border-radius: 15px; height: 300px; object-fit: cover; filter: grayscale(100%); transition: 0.3s; }
         .team-card:hover img { filter: grayscale(0%); transform: translateY(-10px); }
         .nav-link:hover { color: #ffc107 !important; }
+
+        /* ========================= */
+        /* RESPONSIVE FIXES (MOBILE) */
+        /* ========================= */
+        @media (max-width: 768px) {
+            .header-about {
+                padding: 80px 0;
+            }
+            .header-about h1 {
+                font-size: 2.2rem;
+            }
+            .img-about {
+                box-shadow: 10px 10px 0px #ffc107; /* Bayangan lebih tipis di HP */
+                margin-bottom: 20px;
+            }
+            .timeline-item {
+                margin-left: 10px; /* Memberi ruang lebih di sisi kiri */
+            }
+            .display-5 {
+                font-size: 1.8rem;
+            }
+            /* Mengatur agar teks statistik di bawah "Our Story" tidak bertumpuk */
+            .col-sm-4 {
+                margin-bottom: 15px;
+            }
+            .team-card img {
+                height: 350px; /* Lebih tinggi di HP agar proporsional saat satu kolom */
+                filter: grayscale(0%); /* Disable grayscale di HP agar lebih menarik langsung */
+            }
+        }
     </style>
 </head>
 <body>
@@ -54,7 +84,7 @@
 </nav>
 
 <header class="header-about">
-    <div class="container">
+    <div class="container px-4">
         <h1 class="display-3 fw-bold">Dedikasi Dalam Tiap Seduhan</h1>
         <p class="lead fs-4">Mengenal lebih dekat rumah bagi para penikmat kopi.</p>
     </div>
@@ -72,17 +102,17 @@
                 <p class="text-muted">Dimulai dari sebuah garasi kecil di sudut kota pada tahun 2023, Kopi Senja didirikan dengan satu misi sederhana: membawa kualitas kopi artisan ke semua lapisan masyarakat.</p>
                 <p class="text-muted">Kami menyediakan ruang di mana ide lahir, persahabatan terjalin, dan penat hilang. Setiap biji kopi yang kami gunakan telah melewati proses seleksi ketat untuk memastikan profil rasa yang konsisten.</p>
                 <div class="row mt-4 g-3 text-center text-sm-start">
-                    <div class="col-sm-4">
-                        <h3 class="fw-bold text-dark">03</h3>
-                        <p class="text-muted small">Cabang di Jakarta</p>
+                    <div class="col-4 col-sm-4">
+                        <h3 class="fw-bold text-dark mb-0">03</h3>
+                        <p class="text-muted small">Cabang</p>
                     </div>
-                    <div class="col-sm-4">
-                        <h3 class="fw-bold text-dark">12+</h3>
-                        <p class="text-muted small">Barista Sertifikasi</p>
+                    <div class="col-4 col-sm-4">
+                        <h3 class="fw-bold text-dark mb-0">12+</h3>
+                        <p class="text-muted small">Barista</p>
                     </div>
-                    <div class="col-sm-4">
-                        <h3 class="fw-bold text-dark">100%</h3>
-                        <p class="text-muted small">Biji Kopi Lokal</p>
+                    <div class="col-4 col-sm-4">
+                        <h3 class="fw-bold text-dark mb-0">100%</h3>
+                        <p class="text-muted small">Lokal</p>
                     </div>
                 </div>
             </div>
@@ -94,7 +124,7 @@
     <div class="container">
         <h2 class="text-center fw-bold mb-5">Perjalanan Kami</h2>
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-8 col-11">
                 <div class="timeline-item mb-4">
                     <h5 class="fw-bold">Januari 2023</h5>
                     <p class="text-muted">Kedai pertama resmi dibuka di kawasan Jakarta Selatan.</p>
@@ -122,21 +152,21 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="team-card">
-                    <img src="https://i.pinimg.com/1200x/6c/28/6e/6c286ea85654384ee32680eb811e5d92.jpg" class="img-fluid mb-3" alt="Founder">
+                    <img src="https://i.pinimg.com/1200x/6c/28/6e/6c286ea85654384ee32680eb811e5d92.jpg" class="img-fluid mb-3 w-100" alt="Founder">
                     <h5 class="fw-bold">Aris Pratama</h5>
                     <p class="text-warning fw-bold">Founder & Head Roaster</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="team-card">
-                    <img src="https://i.pinimg.com/736x/b6/b2/9f/b6b29f0752d3530e2e7cebbf09e1e5ab.jpg" class="img-fluid mb-3" alt="Head Barista">
+                    <img src="https://i.pinimg.com/736x/b6/b2/9f/b6b29f0752d3530e2e7cebbf09e1e5ab.jpg" class="img-fluid mb-3 w-100" alt="Head Barista">
                     <h5 class="fw-bold">Siska Wijaya</h5>
                     <p class="text-warning fw-bold">Head Barista</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="team-card">
-                    <img src="https://i.pinimg.com/736x/c7/cc/69/c7cc69e4dc1fc74478db2e8014add06b.jpg" class="img-fluid mb-3" alt="Manager">
+                    <img src="https://i.pinimg.com/736x/c7/cc/69/c7cc69e4dc1fc74478db2e8014add06b.jpg" class="img-fluid mb-3 w-100" alt="Manager">
                     <h5 class="fw-bold">Dimas Anggara</h5>
                     <p class="text-warning fw-bold">Store Manager</p>
                 </div>
@@ -149,25 +179,25 @@
     <div class="container text-center py-4">
         <h2 class="fw-bold mb-5 text-warning">Nilai Yang Kami Pegang</h2>
         <div class="row g-4">
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <i class="bi bi-heart-fill fs-1 text-warning"></i>
                 <h5 class="mt-3">Integritas</h5>
-                <p class="small text-white-50">Kejujuran dalam setiap gram kopi yang kami timbang.</p>
+                <p class="small text-white-50 d-none d-sm-block">Kejujuran dalam setiap gram kopi yang kami timbang.</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <i class="bi bi-people-fill fs-1 text-warning"></i>
                 <h5 class="mt-3">Komunitas</h5>
-                <p class="small text-white-50">Menjadi wadah bagi siapa saja untuk berbagi cerita.</p>
+                <p class="small text-white-50 d-none d-sm-block">Menjadi wadah bagi siapa saja untuk berbagi cerita.</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <i class="bi bi-award-fill fs-1 text-warning"></i>
                 <h5 class="mt-3">Kualitas</h5>
-                <p class="small text-white-50">Hanya menggunakan bahan terbaik tanpa kompromi.</p>
+                <p class="small text-white-50 d-none d-sm-block">Hanya menggunakan bahan terbaik tanpa kompromi.</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <i class="bi bi-geo-alt-fill fs-1 text-warning"></i>
                 <h5 class="mt-3">Lokal</h5>
-                <p class="small text-white-50">Mendukung penuh ekosistem kopi nusantara.</p>
+                <p class="small text-white-50 d-none d-sm-block">Mendukung penuh ekosistem kopi nusantara.</p>
             </div>
         </div>
     </div>
