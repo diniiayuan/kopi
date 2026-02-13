@@ -34,18 +34,47 @@
         .menu-list-item {
             padding: 12px 0;
             border-bottom: 1px dashed #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
         }
         .category-title {
             border-left: 5px solid #ffc107;
             padding-left: 15px;
-            margin-bottom: 30px;
-            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-top: 30px;
             color: #212529;
         }
-        .price { font-weight: 700; color: #198754; font-size: 0.95rem; }
+        .price { font-weight: 700; color: #198754; font-size: 0.95rem; white-space: nowrap; margin-left: 10px; }
         .menu-name { font-weight: 600; font-size: 1rem; margin-bottom: 2px; display: block; }
         .menu-desc { font-size: 0.8rem; color: #6c757d; display: block; line-height: 1.4; }
         .nav-link:hover { color: #ffc107 !important; }
+
+        /* ========================= */
+        /* RESPONSIVE FIXES (MOBILE) */
+        /* ========================= */
+        @media (max-width: 768px) {
+            .header-menu {
+                padding: 60px 0;
+            }
+            .header-menu h1 {
+                font-size: 2.2rem;
+            }
+            .header-menu p {
+                font-size: 1rem;
+            }
+            .category-title {
+                margin-top: 20px;
+                font-size: 1.5rem;
+            }
+            .card-best img {
+                height: 250px; /* Lebih tinggi di HP agar proporsional saat satu kolom */
+            }
+            /* Menyesuaikan jarak antar kolom menu di HP */
+            .row.g-5 {
+                --bs-gutter-y: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
